@@ -1,17 +1,20 @@
 package com.it;
 
-import com.it.Helpers.CommonHelper;
-import com.it.Helpers.DashboardHelper;
-import com.it.Helpers.LoginHelper;
+import com.it.Helpers.*;
+import com.it.Pages.NewMessagePage;
 
 public class App {
     public LoginHelper login;
     public DashboardHelper dashboard;
     public CommonHelper common;
+    public NewMessageHelper newMessage;
+    public InboxMessageHelper inboxMessage;
 
     public App() {
         login = new LoginHelper();
         dashboard = new DashboardHelper();
         common = new CommonHelper();
+        newMessage = new NewMessageHelper();
+        inboxMessage = new InboxMessageHelper();
     }
 }

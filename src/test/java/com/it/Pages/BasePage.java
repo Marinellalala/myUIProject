@@ -8,7 +8,7 @@ public abstract class BasePage {
    protected static WebDriver driver;
 
    static {
-     System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+     System.setProperty("webdriver.chrome.driver", "/Users/marina/Downloads/chromedriver");
      driver = new ChromeDriver();
      driver.manage().window().maximize();
      driver.get("https://www.i.ua/");
