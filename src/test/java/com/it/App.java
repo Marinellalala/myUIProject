@@ -1,7 +1,6 @@
 package com.it;
 
 import com.it.Helpers.*;
-import com.it.Pages.NewMessagePage;
 
 public class App {
     public LoginHelper login;

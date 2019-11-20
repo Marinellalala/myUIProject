@@ -1,10 +1,7 @@
 package com.it.Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 
 public class DashboardPage extends BasePage {
@@ -20,9 +17,6 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//div[@class='row new']")
 	public List<WebElement> inboxMessages;
 
-	/*@FindBy(xpath = "//div[@class='row new']")
-    public List<InboxTableRow> tableRows;*/
-
     public String getEmailUser() {
         return lbUserEmail.getText();
     }
@@ -34,14 +28,4 @@ public class DashboardPage extends BasePage {
     public void openInboxMessages() {
         btnInboxMessage.click();
     }
-
-	public WebElement getMessageBySenderAndSubject(String subject) {
-		for (WebElement inboxMessage : inboxMessages) {
-			if (inboxMessage.findElement(By.xpath("//span[@class=\"sbj\"]")).getText().equals(subject)) {
-				return inboxMessage;
-			}
-		}
-//        throw new NoSuchElementException(String.format("New message with title %s mot found", subject));
-		return null;
-	}
 }
