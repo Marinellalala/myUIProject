@@ -1,9 +1,11 @@
 package com.it.Tests;
 
 import com.it.Users.UserFactory;
-import com.it.Utils.Utils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+//private WebElement webElement;
+import com.it.Utils.Utils;
 
 public class MyTest extends BaseTest{
     @Test

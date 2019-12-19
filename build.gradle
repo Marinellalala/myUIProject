@@ -18,3 +18,25 @@ dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
 
 }
+
+task chromeTest(type: Test) {
+    systemProperty "driver", "chrome"
+    useTestNG {
+        suites "src\\test\\resources\\testNG.xml"
+    }
+}
+
+task testGecko(type: Test) {
+    systemProperty "driver", "gecko"
+    useTestNG {
+        suites "src\\test\\resources\\testNG.xml"
+    }
+}
+
+task testBrowserStack(type: Test) {
+        systemProperty "driver", "browserStack"
+        useTestNG {
+            suites "src\\test\\resources\\testNG.xml"
+        }
+}
+
