@@ -3,7 +3,19 @@
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
         <classes>
-            <class name="com.it.Tests.MyTest" />
+            <class name="uiproject.com.it.Tests.MyTest" />
+        </classes>
+    </test>
+
+    <test name="Suite2" >
+        <classes>
+            <class name="suiteRunner.com.runner2.tests.MyTests1" />
+        </classes>
+    </test>
+
+    <test name="Regression1">
+        <classes>
+            <class name="suiteRunner.com.runner2.tests.MyTests2"/>
         </classes>
     </test>
 
